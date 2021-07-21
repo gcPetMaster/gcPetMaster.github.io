@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Stat Calculation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://i.ibb.co/hDKvsBv/Pet-Master.jpg" alt="•Pet Master•" class="logo">
+        <p>•Pet Master•</p>
+        <div class="header-right">
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <p class="content-title">Pet Stat Simulator test</p>
+            <div class="content-card">
+                <div class="card stat">
+                    <p class="card-title">Pet Stat</p>
+                    <hr class="card-separator">
+                    <div class="card-section">
+                        <div class="part derived">
+                            <label for="maxhp">MAX HP</label>
+                            <p id="maxhp">0</p>
+                            <label for="atk">ATK</label>
+                            <p id="atk">0</p>
+                            <label for="matk">MATK</label>
+                            <p id="matk">0</p>
+                            <label for="def">DEF</label>
+                            <p id="def">0</p>
+                            <label for="mdef">MDEF</label>
+                            <p id="mdef">0</p>
+                            <label for="hit">HIT</label>
+                            <p id="hit">0</p>
+                            <label for="aspd">ASPD</label>
+                            <p id="aspd">0</p>
+                            <label for="cspd">CSPD</label>
+                            <p id="cspd">0</p>
+                            <label for="flee">FLEE</label>
+                            <p id="flee">0</p>
+                        </div>
+                        <div class="part ancestry">
+                            <div class="progressbar__button">
+                                <button class="btn minus-btn disabled" type="button" disabled="">-</button>
+                                <div class="progress">
+                                    <div class="progress__fill" style="width: 10%;"></div>
+                                    <span class="progress__text">STR 25</span>
+                                </div>
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
+                            <div class="progressbar__button">
+                                <button class="btn minus-btn disabled" type="button" disabled="">-</button>
+                                <div class="progress">
+                                    <div class="progress__fill" style="width: 6%;"></div>
+                                    <span class="progress__text">INT 15</span>
+                                </div>
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
+                            <div class="progressbar__button">
+                                <button class="btn minus-btn disabled" type="button" disabled="">-</button>
+                                <div class="progress">
+                                    <div class="progress__fill" style="width: 86%;"></div>
+                                    <span class="progress__text">VIT 220</span>
+                                </div>
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
+                            <div class="progressbar__button">
+                                <button class="btn minus-btn disabled" type="button" disabled="">-</button>
+                                <div class="progress">
+                                    <div class="progress__fill" style="width: 59%;"></div>
+                                    <span class="progress__text">AGI 150</span>
+                                </div>
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
+                            <div class="progressbar__button">
+                                <button class="btn minus-btn disabled" type="button" disabled="">-</button>
+                                <div class="progress">
+                                    <div class="progress__fill" style="width: 39%;"></div>
+                                    <span class="progress__text">DEX 100</span>
+                                </div>
+                                <button class="btn plus-btn" type="button">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statpoint">
+                        <p>Poin Status</p>
+                        <input readonly id="free-point" value="0">
+                    </div>
+                </div>
+                <div class="card properties">
+                    <p class="card-title">Pet's Properties</p>
+                    <hr class="card-separator">
+                    <div class="card-section">
+                        <div class="part specs">
+                            <label for="maxLvl">MAX Level</label>
+                            <input type="number" autocomplete="off" id="maxLvl">
+                            <label for="weaponPet">Weapon Pet</label>
+                            <div class="custom-select">
+                                <select id="weaponPet">
+                                    <option value="">Weapon</option>
+                                    <option value="ohs">1H</option>
+                                    <option value="ths">2H</option>
+                                    <option value="bow">Bow</option>
+                                    <option value="bwg">Bowgun</option>
+                                    <option value="stf">Staff</option>
+                                    <option value="md">Magic Device</option>
+                                    <option value="knk">Knuckle</option>
+                                </select>
+                                <span class="custom-arrow"></span>
+                            </div>
+                            <label for="typePet">Tipe Pet</label>
+                            <div class="custom-select">
+                                <select id="typePet">
+                                    <option value="">Tipe</option>
+                                    <option value="ordinary">Awam</option>
+                                    <option value="skillBoost">Penguat Skill</option>
+                                    <option value="allRounder">Serba Bisa</option>
+                                    <option value="genius">Genius</option>
+                                    <option value="physicalAtk">Penyerang Fisik</option>
+                                    <option value="magicAttack">Penyerang Sihir</option>
+                                    <option value="dodge">Penghindar</option>
+                                    <option value="Accurate">Akurat</option>
+                                    <option value="physicalDefense">Tahan Fisik</option>
+                                    <option value="magicDefense">Tahan Sihir</option>
+                                </select>
+                                <span class="custom-arrow"></span>
+                            </div>
+                            <label for="naturePet">Sifat Pet</label>
+                            <div class="custom-select">
+                                <select id="naturePet">
+                                    <option value="">Sifat</option>
+                                    <option value="enthusiastic">Antusias</option>
+                                    <option value="intellegent">Intelek</option>
+                                    <option value="devoted">Setia</option>
+                                    <option value="agile">Lincah</option>
+                                    <option value="timid">Penakut</option>
+                                    <option value="steady">Mantap</option>
+                                    <option value="sturdy">Kokoh</option>
+                                    <option value="justice">Adil</option>
+                                    <option value="calm">Kalem</option>
+                                    <option value="implusive">Nekat</option>
+                                    <option value="proactive">Proaktif</option>
+                                    <option value="brave">Heroik</option>
+                                    <option value="sly">Licik</option>
+                                    <option value="gentle">Lembut</option>
+                                </select>
+                                <span class="custom-arrow"></span>
+                            </div>
+                            <label for="fusePet">Sudah dipadu?</label>
+                            <div class="custom-select">
+                                <select id="fusePet">
+                                    <option value="n">Belum</option>
+                                    <option value="y">Ya, sudah</option>
+                                </select>
+                                <span class="custom-arrow"></span>
+                            </div>
+                            <label for="bonusStat">Bonus Poin Status</label>
+                            <input type="number" autocomplete="off" id="bonusStat" class="hideShow">
+                            <label for="powerPet">Power Pet</label>
+                            <input type="number" autocomplete="off" id="powerPet" class="hideShow">
+                        </div>
+                        <div class="part potential">
+                            <label class="cus">Potensial</label>
+                            <div>Pet</div>
+                            <label for="strPot">STR</label>
+                            <input type="number" autocomplete="off" id="strPot">
+                            <label for="intPot">INT</label>
+                            <input type="number" autocomplete="off" id="intPot">
+                            <label for="vitPot">VIT</label>
+                            <input type="number" autocomplete="off" id="vitPot">
+                            <label for="agiPot">AGI</label>
+                            <input type="number" autocomplete="off" id="agiPot">
+                            <label for="dexPot">DEX</label>
+                            <input type="number" autocomplete="off" id="dexPot">
+                            <div style="visibility: hidden;">Bonus Poin Status</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="Button">
+                        <button id="calculate">Hitung</button>
+                        <div style="width: 30px;"></div>
+                        <button id="reload">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

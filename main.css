@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+:root {
+    /* custom properti variabel untuk warna */
+    --bgColor: #E9E0D8;
+    --headColor: #DBCBBE;
+    --cdColor: #F0EAE5;
+    --sepColor: #96897F;
+    --fontColor: #90877F;
+    --imgColor: #2B424A;
+    --shadowColor: #0000004d;
+    /* untuk progressbar */
+    --progressBColor: #e2d5cb;
+    --progressFColor: #90877F;
+    --buttonColor: #a09a92;
+    --buttHovColor: #948c84;
+    --buttDisColor: #e3d8ce;
+    --fColor: #F8F5F2;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--fontColor);
+}
+
+header {
+    width: auto;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: +1;
+    background-color: var(--headColor);
+    box-shadow: 0 0 5px 0 var(--shadowColor);
+    display: grid;
+    grid-template-columns: 70px repeat(auto-fill, minmax(105px, 1fr));
+    gap: 10px;
+    align-items: center;
+
+}
+
+.card-separator {
+    margin: 10px 0;
+    border: 0.5px solid var(--sepColor);
+}
+
+.card-title {
+    margin: 5px 0 10px;
+}
+
+img {
+    margin: 5px 0 5px 20px;
+    padding: 3px;
+    width: 45px;
+    border-radius: 50%;
+    filter:
+        grayscale(25%) blur(0.25px);
+}
+
+.logo {
+    background-color: var(--imgColor);
+}
+
+/* ==Pengaturan umum tiap class==  */
+.container {
+    margin: 0 auto;
+    /* lebar sama dengan halaman */
+    width: auto;
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 10px;
+    /* lebar 95% dari .container */
+    width: 95%;
+    min-width: 350px;
+    position: relative;
+}
+
+.content-card {
+    width: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(392px, 1fr));
+}
+
+.content-card .card {
+    width: auto;
+    /* max-width: 620px; */
+    padding: 10px;
+    border-radius: 1.2px;
+    background-color: var(--cdColor);
+    box-shadow: 0 0 5px 0 var(--shadowColor);
+    overflow: hidden;
+
+}
+
+.card .card-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.content-card .stat .card-section {
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.card .card-section .part {
+    max-width: 380px;
+    display: grid;
+    place-items: center start;
+    gap: 10px;
+}
+
+/* ==pengaturan individual element part== */
+.stat .card-section .derived {
+    grid-template-columns:
+        max-content 1fr max-content 1fr max-content 1fr;
+    grid-auto-rows: 35px;
+
+}
+
+.properties .card-section .specs {
+    grid-template-columns: max-content min-content;
+}
+
+.properties .card-section .potential {
+    grid-template-columns: max-content min-content;
+    /* place-items: none; */
+}
+
+.stat .card-section .derived p {
+    min-width: 60px;
+}
+
+.part {
+    display: grid;
+    gap: 10px;
+}
+
+.potential label {
+    display: block;
+    width: 120%;
+    text-align: center;
+    text-justify: center;
+}
+
+label.cus {
+    width: 100%;
+    text-align: end;
+}
+
+.statpoint {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#free-point {
+    width: 45px;
+    padding: 0;
+    padding-top: 1px;
+    background: inherit;
+    font-size: inherit;
+    text-align: center;
+    pointer-events: none;
+}
+
+/*
+===========================================
+===========Progresbar setting==============
+===========================================
+*/
+.progressbar__button {
+    height: 30px;
+    display: grid;
+    grid-template-columns: 30px 190px 30px;
+    grid-template-rows: 30px;
+    gap: 5px;
+}
+
+.progress {
+    position: relative;
+    width: 190px;
+    height: 30px;
+    background: var(--progressBColor);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress__fill {
+    width: 0%;
+    height: 100%;
+    background: var(--progressFColor);
+    transition: all .2s;
+
+}
+
+.progress__text {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: var(--fColor);
+}
+
+
+.btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    color: var(--fColor);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: var(--buttonColor);
+}
+
+
+.btn:hover {
+    background: var(--buttHovColor);
+}
+
+.btn:disabled {
+    background: var(--buttDisColor);
+    cursor: default;
+}
+
+.btn:active {
+    position: relative;
+    top: 1.3px;
+}
+
+/*
+===========================================
+=========custom select and input===========
+===========================================
+*/
+
+select,
+input {
+    margin: 0;
+    height: 30px;
+    width: 140px;
+    background: var(--progressBColor);
+    color: inherit;
+    border: none;
+}
+
+select {
+    padding: 0 1em 0 1em;
+    cursor: pointer;
+}
+
+.custom-select {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.custom-arrow {
+    display: block;
+    position: absolute;
+    background: var(--progressFColor);
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    --size: 5px;
+}
+
+.custom-arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid rgba(255, 255, 255, .8);
+    top: 35%;
+}
+
+.custom-arrow::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid rgba(255, 255, 255, .8);
+    top: 65%;
+}
+
+input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.Button {
+    margin: 10px 0 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.Button button {
+    border: none;
+    color: var(--fColor);
+    background: var(--buttonColor);
+    height: 40px;
+    width: 90px;
+    border-radius: 30px;
+}
+
+.Button button:active {
+    position: relative;
+    top: 2px;
+    background: var(--sepColor);
+}
