@@ -330,7 +330,7 @@ input {
     background: var(--sepColor);
 }
 
-// seting untuk viewport mobile
+/* ==Pengaturan layout untuk mobile==  */
 @media only screen and (max-width : 360px) {
     *{
         font-size: 13px;
