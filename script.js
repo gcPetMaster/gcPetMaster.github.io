@@ -292,9 +292,17 @@ const calcDerived = function calculateDerivedStats() {
     fleeEl.innerHTML = calcFlee();
 };
 
+// reset nilai semua variable
+const reset = function reinitializeVariablesValue() {
+    potential.length = 0;
+    stats.length = 0;
+    statsDefault.length = 0;
+}
+
 // membuat tombol utama untuk menghitung semua nilai input
 const calcButton = function calculateAllInputFromPage() {
     if (isAllFilled()) {
+        reset();
         input();
         calcStats();
         progress();
