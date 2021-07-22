@@ -310,7 +310,6 @@ const calcButton = function calculateAllInputFromPage() {
         stats.forEach((e, i) => {
             plusMinRegulation(i);
         })
-        calculate.disabled = true;
         window.scrollTo(0, 0);
         // window.animate({scrollTo: (0, 0)},'fast');
     } else {
