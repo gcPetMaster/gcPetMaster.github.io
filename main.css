@@ -347,7 +347,11 @@ input {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
+    .stat .card-section .derived {
+        grid-auto-rows: 20px;
+    }
+    
     .stat .card-section .derived p {
-        min-width: 50px;
+        min-width: 45px;
     }
 }
