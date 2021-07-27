@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Stat Calculation</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="https://i.ibb.co/hDKvsBv/Pet-Master.jpg" type="image/icon type">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
     </header>
     <div class="container">
         <div class="content">
-            <p class="content-title">Pet Stat Simulator test</p>
+            <p class="content-title">Pet Stat Simulator</p><!-- alpha version -->
             <div class="content-card">
                 <div class="card stat">
                     <p class="card-title">Pet Stat</p>
@@ -50,7 +52,7 @@
                                 <button class="btn minus-btn disabled" type="button" disabled="">-</button>
                                 <div class="progress">
                                     <div class="progress__fill" style="width: 10%;"></div>
-                                    <span class="progress__text">STR 25</span>
+                                    <span class="progress__text">STR 255</span>
                                 </div>
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
@@ -58,7 +60,7 @@
                                 <button class="btn minus-btn disabled" type="button" disabled="">-</button>
                                 <div class="progress">
                                     <div class="progress__fill" style="width: 6%;"></div>
-                                    <span class="progress__text">INT 15</span>
+                                    <span class="progress__text">INT 255</span>
                                 </div>
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
@@ -66,7 +68,7 @@
                                 <button class="btn minus-btn disabled" type="button" disabled="">-</button>
                                 <div class="progress">
                                     <div class="progress__fill" style="width: 86%;"></div>
-                                    <span class="progress__text">VIT 220</span>
+                                    <span class="progress__text">VIT 255</span>
                                 </div>
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
@@ -74,7 +76,7 @@
                                 <button class="btn minus-btn disabled" type="button" disabled="">-</button>
                                 <div class="progress">
                                     <div class="progress__fill" style="width: 59%;"></div>
-                                    <span class="progress__text">AGI 150</span>
+                                    <span class="progress__text">AGI 255</span>
                                 </div>
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
@@ -82,7 +84,7 @@
                                 <button class="btn minus-btn disabled" type="button" disabled="">-</button>
                                 <div class="progress">
                                     <div class="progress__fill" style="width: 39%;"></div>
-                                    <span class="progress__text">DEX 100</span>
+                                    <span class="progress__text">DEX 255</span>
                                 </div>
                                 <button class="btn plus-btn" type="button">+</button>
                             </div>
@@ -93,7 +95,7 @@
                         <input readonly id="free-point" value="0">
                     </div>
                 </div>
-                <div class="card properties">
+                <form name="properties" class="card properties">
                     <p class="card-title">Pet's Properties</p>
                     <hr class="card-separator">
                     <div class="card-section">
@@ -187,11 +189,10 @@
                         <div style="width: 30px;"></div>
                         <button id="reload">Reset</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </body>
-<script src="script.js"></script>
 
 </html>
