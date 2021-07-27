@@ -5,6 +5,7 @@ const maxLvlEl = document.querySelector('#maxLvl');
 const weaponPetEl = document.querySelector('#weaponPet');
 const typePetEl = document.querySelector('#typePet');
 const naturePetEl = document.querySelector('#naturePet');
+const properties = document.forms['properties'];
 
 const strPotEl = document.querySelector('#strPot');
 const intPotEl = document.querySelector('#intPot');
@@ -494,7 +495,18 @@ minButton.forEach((e, i) => {
     })
 });
 
-calculate.addEventListener('click', calcButton);
+calculate.addEventListener('click', e => {
+    e.preventDefault();
+    calcButton();
+});
 reload.addEventListener('click', () => {
-    window.location.reload();
+    // window.location.reload();
+    reset();
+    input();
+    calcStats();
+    progress();
+    calcDerived();
+    stats.forEach((e, i) => {
+        plusMinRegulation(i);
+    })
 });
