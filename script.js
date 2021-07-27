@@ -499,8 +499,9 @@ calculate.addEventListener('click', e => {
     e.preventDefault();
     calcButton();
 });
-reload.addEventListener('click', () => {
+reload.addEventListener('click', e => {
     // window.location.reload();
+    e.preventDefault();
     reset();
     input();
     calcStats();
