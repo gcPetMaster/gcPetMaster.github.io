@@ -502,6 +502,7 @@ calculate.addEventListener('click', e => {
 reload.addEventListener('click', e => {
     // window.location.reload();
     e.preventDefault();
+    properties.reset();
     reset();
     input();
     calcStats();
