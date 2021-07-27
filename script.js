@@ -1,5 +1,6 @@
 // variabel untuk element HTML
 const hideShowEl = document.querySelectorAll('.hideShow');
+const derived = document.querySelectorAll('.derived > p');
 const fusePetEl = document.querySelector('#fusePet');
 const maxLvlEl = document.querySelector('#maxLvl');
 const weaponPetEl = document.querySelector('#weaponPet');
@@ -298,6 +299,7 @@ const reset = function reinitializeVariablesValue() {
     potential.length = 0;
     stats.length = 0;
     statsDefault.length = 0;
+    freePoint.value = 0;
 }
 
 // membuat tombol utama untuk menghitung semua nilai input
@@ -500,14 +502,11 @@ calculate.addEventListener('click', e => {
     calcButton();
 });
 reload.addEventListener('click', e => {
-    // window.location.reload();
     e.preventDefault();
     properties.reset();
     reset();
-    input();
-    calcStats();
     progress();
-    calcDerived();
+    derived.forEach(e => e.textContent = 0);
     stats.forEach((e, i) => {
         plusMinRegulation(i);
     })
