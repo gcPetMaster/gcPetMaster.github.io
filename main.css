@@ -24,6 +24,7 @@ html {
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
     color: var(--fontColor);
+    scroll-behavior: smooth;
 }
 
 header {
